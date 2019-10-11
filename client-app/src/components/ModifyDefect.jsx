@@ -69,7 +69,7 @@ export default function ModifyDefect() {
       severityChoices: defect.severityChoices,
       priorityChoices: defect.priorityChoices,
       status: defect.status,
-      projectId: defect.projectId
+      projectId: defect.project.projectId
     });
   };
 
@@ -217,7 +217,9 @@ export default function ModifyDefect() {
             value={values.projectId}
             onChange={handleChange("projectId")}
             labelWidth={labelWidth}
-          ></Select>
+          >
+          <MenuItem value={values.projectId}>{values.projectId}</MenuItem>
+          </Select>
         </FormControl>
         <Button
           type="submit"
