@@ -94,7 +94,7 @@ export default function ModifyDefect() {
   const handleSubmit = event => {
     event.preventDefault();
     Axios.put(
-      `http://localhost:8087/dt/api/v1/defect/${values.projectId}`,
+      `http://localhost:8087/dt/api/v1/defect/update/${values.projectId}`,
       values
     )
       .then(response => {
